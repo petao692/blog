@@ -1,84 +1,131 @@
-<section id="carreira">
-    <h2>Carreira</h2>
-
-    <article class="card">
-        <h3>A História de Kyrie Irving e Seu Pai</h3>
-
-        <p>
-            Kyrie Andrew Irving nasceu em 23 de março de 1992, em Melbourne,
-            na Austrália, enquanto seu pai, Drederick Irving, atuava como
-            jogador profissional de basquete no país. Pouco tempo depois,
-            a família mudou-se para os Estados Unidos.
-        </p>
-
-        <p>
-            Quando Kyrie tinha cerca de quatro anos, sua mãe, Elizabeth Irving,
-            faleceu devido a uma doença. A partir desse momento, seu pai assumiu
-            a responsabilidade de criá-lo junto com sua irmã, contando também
-            com o apoio da família.
-        </p>
-
-        <p>
-            Drederick Irving teve grande influência no desenvolvimento de Kyrie
-            como atleta. Ex-jogador universitário e profissional, ele levava o
-            filho às quadras desde muito pequeno, ensinando fundamentos,
-            disciplina e dedicação. Os dois passavam horas treinando juntos,
-            fortalecendo não apenas as habilidades no basquete, mas também o
-            vínculo entre pai e filho.
-        </p>
-
-        <p>
-            Inspirado pelo exemplo do pai, Kyrie trabalhou intensamente durante
-            a infância e a adolescência. Seu talento chamou atenção nas escolas
-            onde estudou e, posteriormente, na Universidade de Duke, uma das
-            principais instituições do basquete universitário dos Estados Unidos.
-        </p>
-
-        <p>
-            Em 2011, Kyrie foi selecionado como a primeira escolha do Draft da
-            NBA pelo Cleveland Cavaliers. Desde então, construiu uma carreira
-            marcada por títulos, participações em All-Star Games e momentos
-            decisivos, incluindo a conquista do campeonato da NBA em 2016.
-        </p>
-
-        <p>
-            Ao longo de sua trajetória, Kyrie frequentemente reconheceu a
-            importância de seu pai em sua formação. O incentivo, os ensinamentos
-            e o apoio recebidos desde a infância foram fundamentais para que ele
-            se tornasse um dos armadores mais talentosos de sua geração.
-        </p>
-    </article>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carreira - Kyrie Irving</title>
 
 <style>
-#carreira{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+}
+
+/* Imagem de fundo */
+section{
+    min-height:100vh;
+    background-image:url("imagens/kyrie-fundo.jpg"); /* Troque pela sua imagem */
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     padding:40px;
-    background:#f8f8f8;
 }
 
-#carreira h2{
+/* Camada escura */
+.overlay{
+    background:rgba(0,0,0,0.75);
+    width:100%;
+    max-width:1000px;
+    padding:40px;
+    border-radius:20px;
+}
+
+/* Título */
+h1{
+    color:#FFD700;
     text-align:center;
-    color:#6A0DAD;
-    margin-bottom:25px;
+    margin-bottom:30px;
+    font-size:42px;
 }
 
+/* Caixa de texto */
 .card{
-    max-width:900px;
-    margin:auto;
-    background:#fff;
+    background:rgba(255,255,255,0.95);
     padding:30px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    border-radius:15px;
 }
 
-.card h3{
-    color:#222;
-    margin-bottom:20px;
+h2{
+    color:#6A0DAD;
+    margin:25px 0 15px;
 }
 
-.card p{
+p{
+    color:#333;
+    text-align:justify;
     line-height:1.8;
     margin-bottom:15px;
-    text-align:justify;
+    font-size:17px;
 }
 </style>
+
+</head>
+<body>
+
+<section>
+
+<div class="overlay">
+
+<h1>🏀 Carreira de Kyrie Irving</h1>
+
+<div class="card">
+
+<h2>O Início</h2>
+
+<p>
+Kyrie Andrew Irving nasceu em 23 de março de 1992, em Melbourne, Austrália,
+enquanto seu pai, Drederick Irving, jogava basquete profissional. Pouco tempo
+depois, a família mudou-se para os Estados Unidos.
+</p>
+
+<p>
+Quando Kyrie tinha apenas quatro anos, sua mãe, Elizabeth Irving, faleceu.
+Seu pai passou a cuidar dele e de sua irmã, sempre incentivando o sonho de
+seguir no basquete.
+</p>
+
+<h2>A Influência do Pai</h2>
+
+<p>
+Drederick Irving foi o maior responsável pelo desenvolvimento de Kyrie nas
+quadras. Ex-jogador de basquete, ele treinava o filho desde pequeno,
+ensinando fundamentos, disciplina e dedicação. Graças a esse apoio,
+Kyrie evoluiu rapidamente e chamou a atenção de treinadores por todo o país.
+</p>
+
+<h2>Chegada à NBA</h2>
+
+<p>
+Após se destacar no ensino médio e na Universidade de Duke, Kyrie foi
+escolhido como a primeira escolha do Draft da NBA de 2011 pelo Cleveland
+Cavaliers. Desde então, tornou-se um dos armadores mais habilidosos da liga,
+conquistando o título da NBA em 2016 e participando de diversos All-Star Games.
+</p>
+
+<h2>A Camisa Nº 11</h2>
+
+<p>
+Kyrie Irving escolheu usar a camisa <strong>nº 11</strong>, que se tornou um
+dos maiores símbolos de sua carreira. O número possui um significado pessoal
+para o jogador e passou a representar sua identidade dentro das quadras.
+Com a camisa 11, Kyrie conquistou grandes títulos, marcou cestas decisivas e
+se tornou reconhecido mundialmente pelo seu talento.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
