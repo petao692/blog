@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Kyrie Irving</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            color:#333;
+        }
+
+        header{
+            background:#111;
+            color:white;
+            padding:25px;
+            text-align:center;
+        }
+
+        nav{
+            background:#222;
+            padding:12px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:gold;
+        }
+
+        .banner{
+            background:url("https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80") center/cover;
+            height:350px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            text-shadow:2px 2px 8px black;
+            font-size:40px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:30px auto;
+        }
+
+        article{
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 3px 10px rgba(0,0,0,.1);
+        }
+
+        article h2{
+            color:#6A0DAD;
+            margin-bottom:10px;
+        }
+
+        article p{
+            line-height:1.7;
+        }
+
+        footer{
+            background:#111;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+
+        button{
+            background:#6A0DAD;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            margin-top:15px;
+        }
+
+        button:hover{
+            background:#4B0082;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏀 Blog Kyrie Irving</h1>
+    <p>Tudo sobre um dos armadores mais talentosos da NBA</p>
+</header>
+
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Carreira</a>
+    <a href="#">Estatísticas</a>
+    <a href="#">Notícias</a>
+    <a href="#">Contato</a>
+</nav>
+
+<div class="banner">
+    Kyrie Irving
+</div>
+
+<div class="container">
+
+    <article>
+        <h2>Quem é Kyrie Irving?</h2>
+        <p>
+            Kyrie Irving é um jogador profissional de basquete conhecido por
+            seu incrível controle de bola, habilidade nos arremessos e
+            jogadas decisivas. Ao longo da carreira conquistou títulos,
+            participou de diversos All-Star Games e tornou-se um dos atletas
+            mais populares da NBA.
+        </p>
+    </article>
+
+    <article>
+        <h2>Destaques da Carreira</h2>
+        <p>
+            • Campeão da NBA em 2016.<br>
+            • Diversas participações no All-Star Game.<br>
+            • Medalha de ouro olímpica pelos Estados Unidos.<br>
+            • Reconhecido como um dos melhores dribladores da história da liga.
+        </p>
+    </article>
+
+    <article>
+        <h2>Curiosidade</h2>
+        <p>
+            Kyrie Irving é famoso por sua criatividade em quadra e pela
+            capacidade de decidir partidas importantes com arremessos
+            difíceis nos momentos finais.
+        </p>
+
+        <button onclick="mostrarMensagem()">
+            Saiba Mais
+        </button>
+    </article>
+
+</div>
+
+<footer>
+    <p>© 2026 - Blog Kyrie Irving | Projeto em HTML e CSS</p>
+</footer>
+
+<script>
+function mostrarMensagem(){
+    alert("Obrigado por visitar o Blog Kyrie Irving! 🏀");
+}
+</script>
+
+</body>
+</html>
