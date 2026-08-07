@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="nomesobrenome">Nome e Sobrenome</label>
+        <input type="text"
+        id="nomesobrenome"
+        class="inputpadrao"
+        required>
+
+        <label for="email]">Email</label>
+        <input type="text"
+        type = "email"
+        id="email"
+        class="inputpadrao"
+        required
+        placeholder = "seuemail@dominio.com">
+
+        <label for="telefone">telefone</label>
+        <input type="tel" 
+        id="telefone"
+        class="inputpadrao"
+        required
+        placeholder="(xx)xxxxx-xxxx">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="70" cols="10" 
+        id="mensagem" class="inputpadrao" required></textarea>
+        <fieldset>
+            <legend>Como prefere o nosso contato?</legend>
+            <label for="radio-email">
+                <input type="radio" name="contato"
+                value="email" id="radio-email">
+                </label>
+
+            <label for="radio-whatsapp">
+                <input type="radio"
+                name="contato"
+                value="whatsapp" id="radio-whatsapp" checked>
+                whatsapp
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Qual horirio prefere ser atendido?</legend>
+            <select>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+        </fieldset>
+        <label for="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+        <input type="submit" value="Enviar formulário" class="Enviar">
+    </form>
+</body>
+</html>
