@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kyrie Irving - Estatísticas da Carreira</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070b14;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background:
+                linear-gradient(135deg, rgba(20, 35, 70, .95), rgba(7, 11, 20, .98));
+            padding: 60px 0;
+            border-bottom: 2px solid #315eff;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 span {
+            color: #4d7cff;
+        }
+
+        .hero-text p {
+            color: #b9c3d8;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .number {
+            font-size: 110px;
+            font-weight: bold;
+            color: rgba(77, 124, 255, .18);
+        }
+
+        section {
+            padding: 45px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .section-title span {
+            color: #4d7cff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: #101827;
+            border: 1px solid #202c42;
+            border-radius: 15px;
+            padding: 25px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #4d7cff;
+            box-shadow: 0 10px 30px rgba(77, 124, 255, .12);
+        }
+
+        .card .label {
+            color: #8f9bb3;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .card .value {
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .card .description {
+            color: #65728a;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .career {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .career-box {
+            background: #101827;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #202c42;
+        }
+
+        .career-box h3 {
+            color: #4d7cff;
+            margin-bottom: 20px;
+        }
+
+        .stat-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 13px 0;
+            border-bottom: 1px solid #202a3b;
+        }
+
+        .stat-line:last-child {
+            border-bottom: none;
+        }
+
+        .stat-line span:last-child {
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: #101827;
+            border-radius: 15px;
+            border: 1px solid #202c42;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 750px;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #202a3b;
+        }
+
+        th {
+            background: #172238;
+            color: #6f96ff;
+            font-size: 14px;
+        }
+
+        td {
+            color: #d7deea;
+        }
+
+        tr:hover td {
+            background: #141f33;
+        }
+
+        .highlight {
+            color: #4d7cff;
+            font-weight: bold;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .achievement {
+            background: linear-gradient(145deg, #111d31, #0d1422);
+            border: 1px solid #273653;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .achievement .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .achievement strong {
+            display: block;
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .achievement span {
+            color: #8f9bb3;
+            font-size: 14px;
+        }
+
+        .bar-container {
+            margin-top: 25px;
+        }
+
+        .bar-item {
+            margin-bottom: 20px;
+        }
+
+        .bar-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background: #202b40;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #315eff, #6f96ff);
+            border-radius: 20px;
+        }
+
+        footer {
+            border-top: 1px solid #202c42;
+            padding: 30px 0;
+            text-align: center;
+            color: #65728a;
+            font-size: 14px;
+        }
+
+        .source {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #4e5b70;
+        }
+
+        @media (max-width: 900px) {
+            .stats-grid,
+            .achievements {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .career {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .number {
+                font-size: 80px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid,
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .number {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container hero">
+
+        <div class="hero-text">
+            <h1>Kyrie <span>Irving</span></h1>
+
+            <p>
+                Estatísticas e principais conquistas da carreira na NBA.
+                <br>
+                Armador / Ala-armador • Draft 2011 • 1ª escolha geral
+            </p>
+        </div>
+
+        <div class="number">
+            #11
+        </div>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- ESTATÍSTICAS PRINCIPAIS -->
+    <section>
+
+        <h2 class="section-title">
+            Estatísticas <span>da carreira</span>
+        </h2>
+
+        <div class="stats-grid">
+
+            <div class="card">
+                <div class="label">JOGOS</div>
+                <div class="value">779</div>
+                <div class="description">Temporadas regulares</div>
+            </div>
+
+            <div class="card">
+                <div class="label">PONTOS</div>
+                <div class="value">23,7</div>
+                <div class="description">Pontos por jogo</div>
+            </div>
+
+            <div class="card">
+                <div class="label">REBOTES</div>
+                <div class="value">4,1</div>
+                <div class="description">Rebotes por jogo</div>
+            </div>
+
+            <div class="card">
+                <div class="label">ASSISTÊNCIAS</div>
+                <div class="value">5,6</div>
+                <div class="description">Assistências por jogo</div>
+            </div>
+
+            <div class="card">
+                <div class="label">FG%</div>
+                <div class="value">47,4%</div>
+                <div class="description">Arremessos de quadra</div>
+            </div>
+
+            <div class="card">
+                <div class="label">3P%</div>
+                <div class="value">39,4%</div>
+                <div class="description">Arremessos de 3 pontos</div>
+            </div>
+
+            <div class="card">
+                <div class="label">FT%</div>
+                <div class="value">88,8%</div>
+                <div class="description">Lances livres</div>
+            </div>
+
+            <div class="card">
+                <div class="label">PER</div>
+                <div class="value">22,2</div>
+                <div class="description">Player Efficiency Rating</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPARAÇÃO DE EFICIÊNCIA -->
+    <section>
+
+        <h2 class="section-title">
+            Eficiência de <span>arremesso</span>
+        </h2>
+
+        <div class="career-box">
+
+            <div class="bar-container">
+
+                <div class="bar-item">
+                    <div class="bar-header">
+                        <span>FG%</span>
+                        <strong>47,4%</strong>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:47.4%"></div>
+                    </div>
+                </div>
+
+
+                <div class="bar-item">
+                    <div class="bar-header">
+                        <span>3P%</span>
+                        <strong>39,4%</strong>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:39.4%"></div>
+                    </div>
+                </div>
+
+
+                <div class="bar-item">
+                    <div class="bar-header">
+                        <span>FT%</span>
+                        <strong>88,8%</strong>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar-fill" style="width:88.8%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARREIRA -->
+    <section>
+
+        <h2 class="section-title">
+            Perfil da <span>carreira</span>
+        </h2>
+
+        <div class="career">
+
+            <div class="career-box">
+
+                <h3>Estatísticas médias</h3>
+
+                <div class="stat-line">
+                    <span>Pontos</span>
+                    <span>23,7</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Rebotes</span>
+                    <span>4,1</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Assistências</span>
+                    <span>5,6</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Roubos de bola</span>
+                    <span>1,3</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Bloqueios</span>
+                    <span>0,4</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Turnovers</span>
+                    <span>2,5</span>
+                </div>
+
+            </div>
+
+
+            <div class="career-box">
+
+                <h3>Recordes pessoais</h3>
+
+                <div class="stat-line">
+                    <span>Pontos</span>
+                    <span class="highlight">60</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Rebotes</span>
+                    <span class="highlight">11</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Assistências</span>
+                    <span class="highlight">18</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Roubos</span>
+                    <span class="highlight">8</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Bloqueios</span>
+                    <span class="highlight">4</span>
+                </div>
+
+                <div class="stat-line">
+                    <span>Triple-doubles</span>
+                    <span class="highlight">3</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEMPORADA MAIS RECENTE -->
+    <section>
+
+        <h2 class="section-title">
+            Temporada <span>2024–25</span>
+        </h2>
+
+        <div class="stats-grid">
+
+            <div class="card">
+                <div class="label">JOGOS</div>
+                <div class="value">50</div>
+                <div class="description">Dallas Mavericks</div>
+            </div>
+
+            <div class="card">
+                <div class="label">PONTOS</div>
+                <div class="value">24,7</div>
+                <div class="description">Por jogo</div>
+            </div>
+
+            <div class="card">
+                <div class="label">REBOTES</div>
+                <div class="value">4,8</div>
+                <div class="description">Por jogo</div>
+            </div>
+
+            <div class="card">
+                <div class="label">ASSISTÊNCIAS</div>
+                <div class="value">4,6</div>
+                <div class="description">Por jogo</div>
+            </div>
+
+            <div class="card">
+                <div class="label">FG%</div>
+                <div class="value">47,3%</div>
+                <div class="description">Aproveitamento</div>
+            </div>
+
+            <div class="card">
+                <div class="label">3P%</div>
+                <div class="value">40,1%</div>
+                <div class="description">Aproveitamento de 3</div>
+            </div>
+
+            <div class="card">
+                <div class="label">FT%</div>
+                <div class="value">91,6%</div>
+                <div class="description">Lances livres</div>
+            </div>
+
+            <div class="card">
+                <div class="label">MINUTOS</div>
+                <div class="value">36,1</div>
+                <div class="description">Por jogo</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONQUISTAS -->
+    <section>
+
+        <h2 class="section-title">
+            Principais <span>conquistas</span>
+        </h2>
+
+        <div class="achievements">
+
+            <div class="achievement">
+                <div class="icon">🏆</div>
+                <strong>1x</strong>
+                <span>Campeão da NBA</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">⭐</div>
+                <strong>9x</strong>
+                <span>NBA All-Star</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">🔥</div>
+                <strong>3x</strong>
+                <span>All-NBA</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">👑</div>
+                <strong>1x</strong>
+                <span>Rookie of the Year</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">🌟</div>
+                <strong>1x</strong>
+                <span>All-Star MVP</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">🥇</div>
+                <strong>1x</strong>
+                <span>Medalha de ouro olímpica</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">🏀</div>
+                <strong>1x</strong>
+                <span>All-Rookie Team</span>
+            </div>
+
+            <div class="achievement">
+                <div class="icon">🎯</div>
+                <strong>60</strong>
+                <span>Pontos em seu recorde pessoal</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESUMO -->
+    <section>
+
+        <h2 class="section-title">
+            Resumo <span>estatístico</span>
+        </h2>
+
+        <div class="career-box">
+
+            <div class="stat-line">
+                <span>Temporadas na NBA</span>
+                <span>14</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Jogos disputados</span>
+                <span>779</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Pontos por jogo</span>
+                <span>23,7</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Rebotes por jogo</span>
+                <span>4,1</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Assistências por jogo</span>
+                <span>5,6</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Aproveitamento de quadra</span>
+                <span>47,4%</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Aproveitamento de 3 pontos</span>
+                <span>39,4%</span>
+            </div>
+
+            <div class="stat-line">
+                <span>Aproveitamento de lance livre</span>
+                <span>88,8%</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Kyrie Irving — Estatísticas da carreira na NBA
+    </p>
+
+    <p class="source">
+        Dados de referência: NBA.com e Basketball-Reference.
+        Estatísticas de temporada regular até 2024–25.
+    </p>
+
+</footer>
+
+</body>
+</html>
