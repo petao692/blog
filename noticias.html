@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Notícias Recentes - Kyrie Irving</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #eef5ff;
+        color: #172033;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    header {
+        background: linear-gradient(135deg, #003b8f, #0878e8);
+        color: white;
+        padding: 55px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+
+    header h1 span {
+        color: #9ed0ff;
+    }
+
+    header p {
+        font-size: 18px;
+        color: #dceeff;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #ffffff;
+        color: #0064c8;
+        padding: 7px 15px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 18px;
+    }
+
+    main {
+        padding: 45px 0;
+    }
+
+    .intro {
+        background: white;
+        border-left: 5px solid #0878e8;
+        padding: 22px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 65, 140, 0.08);
+    }
+
+    .intro strong {
+        color: #005dcc;
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .news-card {
+        background: white;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid #cfe2fa;
+        box-shadow: 0 6px 20px rgba(0, 66, 145, 0.08);
+        transition: 0.3s;
+    }
+
+    .news-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 80, 170, 0.16);
+    }
+
+    .news-top {
+        background: linear-gradient(135deg, #005dcc, #008cff);
+        color: white;
+        padding: 20px;
+    }
+
+    .news-top .tag {
+        font-size: 12px;
+        font-weight: bold;
+        background: rgba(255,255,255,0.2);
+        padding: 5px 9px;
+        border-radius: 12px;
+    }
+
+    .news-top h2 {
+        margin-top: 13px;
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .news-content {
+        padding: 22px;
+    }
+
+    .news-content p {
+        color: #536176;
+        margin-bottom: 15px;
+    }
+
+    .date {
+        color: #0878e8;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .highlight {
+        margin-top: 18px;
+        padding: 13px;
+        background: #edf6ff;
+        border-radius: 8px;
+        color: #0058b8;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .section-title {
+        margin: 45px 0 20px;
+        color: #003b8f;
+        font-size: 29px;
+    }
+
+    .update {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 25px;
+        border: 1px solid #cfe2fa;
+        box-shadow: 0 5px 18px rgba(0, 66, 145, 0.07);
+    }
+
+    .update h3 {
+        color: #0066d6;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .stat {
+        background: #f0f7ff;
+        border: 1px solid #d2e6fb;
+        padding: 18px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .stat strong {
+        display: block;
+        font-size: 27px;
+        color: #005dcc;
+    }
+
+    .stat span {
+        color: #65738a;
+        font-size: 13px;
+    }
+
+    .source {
+        margin-top: 25px;
+        padding-top: 18px;
+        border-top: 1px solid #dce8f5;
+        font-size: 12px;
+        color: #718096;
+    }
+
+    footer {
+        background: #002b66;
+        color: #bcdcff;
+        text-align: center;
+        padding: 28px;
+        margin-top: 30px;
+        font-size: 13px;
+    }
+
+    footer strong {
+        color: white;
+    }
+
+    @media (max-width: 850px) {
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .stats {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+```
+    <div class="badge">NBA • NOTÍCIAS RECENTES</div>
+
+    <h1>Kyrie <span>Irving</span></h1>
+
+    <p>
+        As principais novidades sobre o astro dos Dallas Mavericks
+    </p>
+
+</div>
+```
+
+</header>
+
+<main class="container">
+
+```
+<div class="intro">
+    <strong>Atualização:</strong>
+    Kyrie Irving está no centro das atenções durante a preparação
+    para a temporada 2026–27. Depois de ficar fora da temporada
+    2025–26 durante a recuperação de uma lesão no ligamento cruzado
+    anterior (ACL), o armador é esperado de volta à NBA.
+</div>
+
+
+<div class="news-grid">
+
+    <!-- NOTÍCIA 1 -->
+
+    <article class="news-card">
+
+        <div class="news-top">
+
+            <span class="tag">RECUPERAÇÃO</span>
+
+            <h2>
+                Kyrie Irving se prepara para voltar à NBA
+            </h2>
+
+        </div>
+
+        <div class="news-content">
+
+            <div class="date">
+                Julho de 2026
+            </div>
+
+            <p>
+                Kyrie Irving avançou na recuperação da lesão no ACL
+                sofrida em março de 2025. Relatos recentes indicam que
+                o jogador está totalmente recuperado e trabalhando
+                visando o retorno na temporada 2026–27.
+            </p>
+
+            <p>
+                O retorno de Irving é considerado uma das principais
+                histórias da próxima temporada dos Mavericks.
+            </p>
+
+            <div class="highlight">
+                🔵 Expectativa: retorno na temporada 2026–27
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- NOTÍCIA 2 -->
+
+    <article class="news-card">
+
+        <div class="news-top">
+
+            <span class="tag">MAVERICKS</span>
+
+            <h2>
+                Dallas mantém Kyrie Irving nos planos
+            </h2>
+
+        </div>
+
+        <div class="news-content">
+
+            <div class="date">
+                Agosto de 2026
+            </div>
+
+            <p>
+                Os Dallas Mavericks continuam tratando Kyrie Irving
+                como uma peça importante para o futuro da franquia.
+                Mesmo com mudanças no elenco e na estrutura da equipe,
+                o veterano permanece nos planos de Dallas.
+            </p>
+
+            <p>
+                O objetivo é contar novamente com sua capacidade de
+                criação, pontuação e liderança em quadra.
+            </p>
+
+            <div class="highlight">
+                🔵 Kyrie continua sendo uma peça importante dos Mavs
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- NOTÍCIA 3 -->
+
+    <article class="news-card">
+
+        <div class="news-top">
+
+            <span class="tag">MERCADO NBA</span>
+
+            <h2>
+                Mavericks rejeitam sondagens por Kyrie
+            </h2>
+
+        </div>
+
+        <div class="news-content">
+
+            <div class="date">
+                Julho de 2026
+            </div>
+
+            <p>
+                Segundo relatos publicados durante a offseason,
+                algumas equipes demonstraram interesse em saber
+                sobre a situação de Kyrie Irving.
+            </p>
+
+            <p>
+                Dallas, porém, não teria colocado o armador
+                oficialmente à disposição para negociações,
+                reforçando a importância do jogador para o projeto.
+            </p>
+
+            <div class="highlight">
+                🔵 Dallas não demonstra intenção de negociá-lo
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<h2 class="section-title">
+    Situação atual de Kyrie Irving
+</h2>
+
+
+<div class="update">
+
+    <h3>
+        🏀 Próximo capítulo da carreira
+    </h3>
+
+    <p>
+        Após passar a temporada 2025–26 inteira em recuperação,
+        Kyrie Irving entra na preparação para 2026–27 com a missão
+        de voltar ao nível que apresentou antes da lesão.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>2026–27</strong>
+            <span>Temporada esperada de retorno</span>
+        </div>
+
+        <div class="stat">
+            <strong>9x</strong>
+            <span>NBA All-Star</span>
+        </div>
+
+        <div class="stat">
+            <strong>1x</strong>
+            <span>Campeão da NBA</span>
+        </div>
+
+        <div class="stat">
+            <strong>#11</strong>
+            <span>Dallas Mavericks</span>
+        </div>
+
+    </div>
+
+    <div class="source">
+        Fontes de referência: NBA.com, ESPN, NBC Sports e reportagens
+        recentes sobre os Dallas Mavericks. As informações podem mudar
+        conforme novas atualizações da offseason forem divulgadas.
+    </div>
+
+</div>
+```
+
+</main>
+
+<footer>
+
+```
+<p>
+    <strong>Kyrie Irving News</strong>
+</p>
+
+<p>
+    Conteúdo esportivo • NBA • Dallas Mavericks
+</p>
+```
+
+</footer>
+
+</body>
+</html>
+```
+
+**Observação:** a notícia sobre a recuperação é baseada em relatos de julho de 2026; a confirmação oficial anterior dos Mavericks é que Irving ficaria fora de toda a temporada 2025–26 para continuar a recuperação do ACL. As reportagens de julho também indicaram que Dallas rejeitou sondagens de outras equipes pelo jogador.
+
+Se quiser, posso fazer uma **versão de portal esportivo profissional**, com menu, manchete principal, cards de notícias, foto do Kyrie, animações e seção de comentários.
